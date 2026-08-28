@@ -1,0 +1,12 @@
+begin;
+select plan(8);
+select has_table('public','profiles','profiles exists');
+select has_table('public','routes','routes exists');
+select has_table('public','buses','buses exists');
+select has_table('public','trips','trips exists');
+select has_table('public','tickets','tickets exists');
+select has_table('public','payments','payments exists');
+select has_function('public','book_ticket','booking transaction exists');
+select has_function('public','validate_ticket','validation transaction exists');
+select * from finish();
+rollback;
